@@ -1,0 +1,86 @@
+.post-class h2, .post-class h3, .post-class h4 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 32px 4px 20px;
+}
+
+.post-class h2 {
+    font-size: 19px;
+}
+
+.post-class h3 {
+    font-size: 17px;
+}
+
+.post-class h4 {
+    font-size: 15px;
+}
+
+.post-class p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 4px 0;
+}
+
+.post-class strong {
+    font-weight: bold;
+}
+
+.post-class ul {
+    margin: 16px 32px;
+    list-style: square;
+}
+
+.post-class blockquote {
+    border-right: 5px solid #c1c1c1;
+    padding-right: 8px;
+}
+
+.post-class figure {
+    margin: 24px auto;
+    max-width: 100%;
+    width: 500px;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.blog-title {
+    background-color: #000000aa;
+}
+
+.post-class table {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #232323;
+}
+
+.post-class figure.table {
+    margin: 24px auto;
+    width: 100%;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.post-class figcaption {
+    caption-side: bottom;
+    font-weight: bold;
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.post-class table th {
+    font-size: 1rem;
+}
+
+.post-class table th, .post-class table td {
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.post-class table tr:nth-child(2n+1) td {
+    background-color: #2d2d2d;
+}
+

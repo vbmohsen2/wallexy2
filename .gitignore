@@ -1,0 +1,12 @@
+node_modules
+build
+coverage
+public
+inertia
+.vscode
+.DS_STORE
+.env
+tmp
+.idea
+yarn.lock
+yarn-error.log

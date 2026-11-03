@@ -1,0 +1,43 @@
+.special {
+  @apply bg-gradient-to-b from-neutral-100 to-neutral-200
+}
+
+.special-r {
+  @apply bg-gradient-to-b from-neutral-200 to-neutral-100
+}
+
+.special-y {
+  @apply bg-gradient-to-b from-neutral-50 via-neutral-100 to-neutral-200
+}
+
+.special-x {
+  @apply bg-gradient-to-r from-neutral-100 to-neutral-200
+}
+
+.input{
+  @apply special rounded-sm w-full border focus:outline-none p-3
+}
+
+.input-icons{
+  @apply absolute cursor-pointer bottom-4 text-neutral-500
+}
+
+.input-label{
+  @apply flex relative pb-3
+}
+
+.option-item{
+  @apply py-3 px-3 cursor-pointer hover:bg-neutral-200
+}
+
+.bag-photo {
+  @apply rounded-xl sm:rounded-l-none md:rounded-l-xl lg:rounded-l-none
+}
+
+.center {
+  @apply absolute transform top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-full
+}
+
+.strech {
+  @apply lg:pt-1.5 transform xl:scale-y-[1.02] xl:translate-y-[3px]
+}

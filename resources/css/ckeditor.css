@@ -1,0 +1,53 @@
+:root {
+    /* Overrides the border radius setting in the theme. */
+    --ck-border-radius: 0px !important;
+    --ck-color-text: #718096 !important;
+    --ck-color-base-border: #eee !important;
+    --ck-color-focus-border: #eee !important;
+    --ck-resizer-border-width: 4px !important;
+    --ck-font-face: 'Google Noto', sans-serif !important;
+}
+
+.ck .ck-content *::selection {
+    background: #dddddd !important;
+}
+
+
+.ck .ck-content h2, .ck .ck-content h3, .ck .ck-content h4 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 32px 4px 20px;
+}
+
+.ck .ck-content h2 {
+    font-size: 19px;
+}
+
+.ck .ck-content h3 {
+    font-size: 16px;
+}
+
+.ck .ck-content h4 {
+    font-size: 14px;
+}
+
+.ck .ck-content p {
+    font-size: 12px;
+    text-align: justify;
+    margin: 4px 0;
+}
+
+.ck .ck-content ul {
+    margin: 16px 32px;
+    list-style: square;
+}
+
+.ck .ck-content figure {
+    margin: 24px auto;
+}
+
+.ck-editor__editable_inline {
+    min-height: 400px;
+    max-height: 600px;
+    overflow-y: auto;
+}
