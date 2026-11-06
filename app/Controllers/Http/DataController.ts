@@ -38,6 +38,10 @@ export default class DataController {
     return inertia.render('contact')
   }
 
+  public async beforeBuy({inertia}: HttpContextContract) {
+    return inertia.render('before-buy')
+  }
+
   public async mail({request, response}: HttpContextContract) {
     await request.validate({
       schema: Validation.mail(),

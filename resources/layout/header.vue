@@ -1,5 +1,22 @@
 <template>
-  <header class="fixed w-full p-2 z-30">
+  <header class="fixed w-full z-30">
+    <!-- نوار استعلام موجودی و قیمت -->
+    <div class="w-full bg-emerald-600 text-white">
+      <container class="flex items-center justify-between gap-2 py-2">
+        <div class="flex items-center gap-1.5 min-w-0 text-xs md:text-sm">
+          <icon :name="icons.notice" class="shrink-0" size="16"/>
+          <span class="truncate md:hidden">موجودی و قیمت روز را استعلام کنید</span>
+          <span class="hidden md:inline">قبل از خرید، از موجودی و قیمت روز محصول استعلام بگیرید.</span>
+        </div>
+        <inertia-link class="shrink-0 inline-flex items-center gap-1 bg-white/20 hover:bg-white/30 border border-white/30 rounded-full px-3 py-1 text-xs md:text-sm font-semibold transition-colors"
+                      href="/before-buy" title="قبل از خرید بدانید">
+          <span class="hidden xs:inline">قبل از خرید بدانید</span>
+          <span class="xs:hidden">بیشتر بدانید</span>
+          <icon :name="icons.arrow" size="14"/>
+        </inertia-link>
+      </container>
+    </div>
+    <div class="p-2">
     <container>
       <row class="-mx-2 md:-mx-0">
         <w class="relative mt-1.5">
@@ -92,6 +109,7 @@
         </w>
       </row>
     </container>
+    </div>
   </header>
 </template>
 <script>
@@ -100,7 +118,7 @@ import User from '@/components/auth/user'
 import Expand from "@/transitions/expand";
 import Category from "@/components/custom/xcategory";
 
-import {mdiShoppingOutline, mdiMenu, mdiMagnify, mdiShape, mdiChevronUp} from '@mdi/js';
+import {mdiShoppingOutline, mdiMenu, mdiMagnify, mdiShape, mdiChevronUp, mdiAlertCircleOutline, mdiArrowLeft} from '@mdi/js';
 
 export default {
   components: {User, Expand, Category},
@@ -120,6 +138,8 @@ export default {
       up: mdiChevronUp,
       category: mdiShape,
       basket: mdiShoppingOutline,
+      notice: mdiAlertCircleOutline,
+      arrow: mdiArrowLeft,
     }
   }),
   methods: {

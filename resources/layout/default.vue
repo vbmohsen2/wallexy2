@@ -2,7 +2,7 @@
 <template>
   <div class="flex flex-col min-h-screen flex-grow flex-shrink-0 text-neutral-900">
     <header-x/>
-    <main class="flex-grow relative flex flex-shrink-0 md:mt-24 mt-20">
+    <main class="flex-grow relative flex flex-shrink-0 md:mt-36 mt-32">
       <transition name="page">
         <div :key="$page.url" class="w-full mb-3">
           <slot/>

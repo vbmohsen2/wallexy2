@@ -20,7 +20,8 @@ export default class Sitemap {
         url: [
           {loc: 'https://wallexy.ir/'},
           {loc: 'https://wallexy.ir/blog'},
-          {loc: 'https://wallexy.ir/contact', lastmod: today}
+          {loc: 'https://wallexy.ir/contact', lastmod: today},
+          {loc: 'https://wallexy.ir/before-buy', lastmod: today}
         ]
       }
     }
