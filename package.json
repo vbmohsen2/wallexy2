@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "node ace serve --watch",
     "build": "node ace build --production",
+    "build:ssr": "encore production -c webpack.ssr.config.js",
+    "postbuild": "npm run build:ssr && mkdir -p build/inertia && cp -r inertia/ssr build/inertia/ && cp .env build/.env",
     "start": "node server.js"
   },
   "devDependencies": {

@@ -1,9 +1,9 @@
 module.exports = {
   apps: [
     {
-      name: 'wallexy',
+      name: 'wallexy2',
       exec_mode: 'cluster',
-      instances: 'max',
+      instances: '1',
       script: './build/server.js',
       args: 'start',
       time: true
