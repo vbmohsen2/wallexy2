@@ -1,0 +1,30 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "http://localhost:8080/assets/adonisvue.051a0b6c.js",
+        "http://localhost:8080/assets/adonisvue.0ccd796e.js",
+        "http://localhost:8080/assets/adonisvue.8fc3715a.js",
+        "http://localhost:8080/assets/adonisvue.699d959b.js",
+        "http://localhost:8080/assets/adonisvue.37eb8560.js",
+        "http://localhost:8080/assets/adonisvue.97bc33a4.js",
+        "http://localhost:8080/assets/adonisvue.cdda80d5.js",
+        "http://localhost:8080/assets/adonisvue.0512de91.js",
+        "http://localhost:8080/assets/adonisvue.f5101376.js",
+        "http://localhost:8080/assets/adonisvue.26a85103.js",
+        "http://localhost:8080/assets/adonisvue.c1023cd6.js",
+        "http://localhost:8080/assets/adonisvue.d18e4259.js",
+        "http://localhost:8080/assets/adonisvue.eda4f8a7.js",
+        "http://localhost:8080/assets/adonisvue.4b8b93d0.js",
+        "http://localhost:8080/assets/adonisvue.c73b3718.js",
+        "http://localhost:8080/assets/adonisvue.86a86c55.js",
+        "http://localhost:8080/assets/adonisvue.e917c3d5.js",
+        "http://localhost:8080/assets/adonisvue.ab2438da.js",
+        "http://localhost:8080/assets/adonisvue.932c2866.js"
+      ],
+      "css": [
+        "http://localhost:8080/assets/adonisvue.e917c3d5.css"
+      ]
+    }
+  }
+}

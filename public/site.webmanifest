@@ -1,0 +1,35 @@
+{
+  "name": "فروشگاه آنلاین والکسی",
+  "short_name": "والکسی",
+  "description": "فروشگاه آنلاین والکسی , فروش آنلاین تمامی برند ها و مدل های کاغذ دیواری و پوستر با تضمین قیمت مناسب, کیفیت و اصل بودن کالا , تحویل فوری و در بسته بندی با کیفیت می باشد.",
+  "icons": [
+    {
+      "src": "/icons/icon_192x192.177439.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon_512x512.177439.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "src": "/icons/icon_192x192.177439.mask.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "src": "/icons/icon_512x512.177439.mask.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f1f1f3",
+  "lang": "fa",
+  "dir": "rtl"
+}

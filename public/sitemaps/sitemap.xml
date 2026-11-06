@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://wallexy.ir/sitemaps/products.xml</loc>
+        <lastmod>2026-11-02</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://wallexy.ir/sitemaps/categories.xml</loc>
+        <lastmod>2026-11-02</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://wallexy.ir/sitemaps/blogs.xml</loc>
+        <lastmod>2026-11-02</lastmod>
+    </sitemap>
+</sitemapindex>

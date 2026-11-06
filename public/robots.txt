@@ -1,0 +1,17 @@
+User-Agent: *
+
+Disallow: *?*
+Disallow: /admin
+Disallow: /auth
+Disallow: /basket
+Disallow: /bags
+Disallow: /order
+Disallow: /pay
+Disallow: /profile
+Disallow: /verify
+Disallow: /callback
+Disallow: /search
+Disallow: /xproduct
+Disallow: /xcategory
+
+Sitemap: https://wallexy.ir/sitemaps/sitemap.xml
