@@ -7,6 +7,7 @@ const blog = {create: ['auth', 'admin'], edit: ['auth', 'admin'], store: ['auth'
 Route.get('/', 'DataController.main')
 Route.get('contact', 'DataController.contact')
 Route.get('before-buy', 'DataController.beforeBuy')
+Route.get('measure', 'DataController.measure')
 
 Route.group(() => {
   Route.post('login', 'AuthController.login')

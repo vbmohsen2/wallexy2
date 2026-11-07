@@ -66,6 +66,39 @@
       </row>
     </section>
 
+    <!-- راهنمای اندازه‌گیری -->
+    <section class="relative overflow-hidden bg-white border border-emerald-200 rounded-xl p-5 md:p-6 mb-4">
+      <div class="absolute -left-12 -top-12 w-40 h-40 rounded-full bg-emerald-50 opacity-70 pointer-events-none"/>
+      <row class="relative items-center -mx-3">
+        <w class="px-3 mb-4 md:mb-0" md="2/3">
+          <div class="flex items-start gap-3">
+            <div class="w-11 h-11 shrink-0 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-sm">
+              <icon :name="icons.measure" size="22"/>
+            </div>
+            <div>
+              <div class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-200 mb-2">
+                <span class="pt-0.5">ابزار کمکی خرید</span>
+              </div>
+              <h2 class="text-lg font-bold text-neutral-900 mb-1">نمی‌دانید چند رول کاغذدیواری لازم دارید؟</h2>
+              <p class="text-sm text-neutral-500 leading-7">
+                پیش از ثبت سفارش، اندازه دیوارها را با راهنمای «نحوه اندازه‌گیری» والکسی بررسی کنید.
+                در این راهنما چهار روش ساده، از ترسیم کروکی تا محاسبه توسط کارشناس، همراه با محاسبه‌گر آنلاین تعداد رول آموزش داده شده است.
+              </p>
+            </div>
+          </div>
+        </w>
+        <w class="px-3" md="1/3">
+          <inertia-link class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors"
+                        href="/measure" title="راهنمای نحوه اندازه‌گیری کاغذدیواری">
+            <icon :name="icons.ruler" size="18"/>
+            <span>راهنمای نحوه اندازه‌گیری</span>
+            <icon :name="icons.arrow" size="16"/>
+          </inertia-link>
+          <div class="text-center text-xs text-neutral-500 mt-2">۴ روش ساده + محاسبه‌گر آنلاین تعداد رول</div>
+        </w>
+      </row>
+    </section>
+
     <!-- بخش‌های محتوا -->
     <section v-for="(section, index) in sections" :id="section.id" :key="section.id"
              class="scroll-mt-40 bg-white border border-neutral-200 rounded-xl p-5 md:p-8 mb-4">
@@ -213,6 +246,7 @@
 <script>
 import {
   mdiAlertCircleOutline,
+  mdiArrowLeft,
   mdiBarcode,
   mdiCartOutline,
   mdiCheck,
@@ -225,6 +259,7 @@ import {
   mdiPaletteOutline,
   mdiPhone,
   mdiRefresh,
+  mdiRulerSquare,
   mdiSend,
   mdiShieldCheckOutline,
   mdiTruckDeliveryOutline
@@ -250,7 +285,10 @@ export default {
         shield: mdiShieldCheckOutline,
         truck: mdiTruckDeliveryOutline,
         question: mdiInformationOutline,
-        checkMark: mdiCheck
+        checkMark: mdiCheck,
+        measure: mdiRulerSquare,
+        ruler: mdiRulerSquare,
+        arrow: mdiArrowLeft
       },
       sections: [
         {

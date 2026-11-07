@@ -42,6 +42,10 @@ export default class DataController {
     return inertia.render('before-buy')
   }
 
+  public async measure({inertia}: HttpContextContract) {
+    return inertia.render('measure')
+  }
+
   public async mail({request, response}: HttpContextContract) {
     await request.validate({
       schema: Validation.mail(),
