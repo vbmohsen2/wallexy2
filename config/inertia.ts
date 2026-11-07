@@ -16,6 +16,6 @@ export const inertia: InertiaConfig = {
   view: 'app',
   ssr: {
     enabled: true,
-    allowList: ['index', 'category/show', 'product/show', 'blog/index', 'blog/show' , 'essential/price']
+    allowList: ['index', 'category/show', 'product/show', 'blog/index', 'blog/show' , 'essential/price','measure','before-buy','shipping-return']
   },
 };

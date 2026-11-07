@@ -28,6 +28,12 @@
             <icon :name="icons.time" class="pl-1.5" size="18"/>
             <span>روز های کاری ساعت ۹ صبح تا ۹ شب</span>
           </div>
+          <inertia-link href="/shipping-return" title="نحوه ارسال و شرایط مرجوعی">
+            <div class="flex py-2">
+              <icon :name="icons.truck" class="pl-1.5" size="18"/>
+              <span>نحوه ارسال و شرایط مرجوعی</span>
+            </div>
+          </inertia-link>
         </w>
         <w class="mt-6" lg="1/5" sm="1/2">
           <span class="mb-6 text-md block">شبکه های اجتماعی</span>
@@ -114,6 +120,7 @@ import {
   mdiStorefront,
   mdiTextBoxOutline,
   mdiTimer,
+  mdiTruckDeliveryOutline,
   mdiTwitter,
   mdiWeb
 } from '@mdi/js';
@@ -138,6 +145,7 @@ export default {
       cellphone: mdiCellphone,
       basket: mdiBasket,
       post: mdiTextBoxOutline,
+      truck: mdiTruckDeliveryOutline,
     }
   }),
   methods: {

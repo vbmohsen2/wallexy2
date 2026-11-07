@@ -42,6 +42,10 @@ export default class DataController {
     return inertia.render('before-buy')
   }
 
+  public async shippingReturn({inertia}: HttpContextContract) {
+    return inertia.render('shipping-return')
+  }
+
   public async measure({inertia}: HttpContextContract) {
     return inertia.render('measure')
   }
