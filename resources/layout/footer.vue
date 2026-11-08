@@ -34,6 +34,12 @@
               <span>نحوه ارسال و شرایط مرجوعی</span>
             </div>
           </inertia-link>
+          <inertia-link href="/faq" title="سؤالات متداول">
+            <div class="flex py-2">
+              <icon :name="icons.faq" class="pl-1.5" size="18"/>
+              <span>سؤالات متداول</span>
+            </div>
+          </inertia-link>
         </w>
         <w class="mt-6" lg="1/5" sm="1/2">
           <span class="mb-6 text-md block">شبکه های اجتماعی</span>
@@ -113,6 +119,7 @@ import {
   mdiCopyright,
   mdiDeskphone,
   mdiEmail,
+  mdiFrequentlyAskedQuestions,
   mdiHeart,
   mdiInstagram,
   mdiMailboxOpen,
@@ -132,6 +139,7 @@ export default {
       web: mdiWeb,
       time: mdiTimer,
       email: mdiEmail,
+      faq: mdiFrequentlyAskedQuestions,
       mail: mdiMailboxOpen,
       phone: mdiDeskphone,
       map: mdiMapMarker,

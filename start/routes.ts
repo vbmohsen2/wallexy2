@@ -9,6 +9,7 @@ Route.get('contact', 'DataController.contact')
 Route.get('before-buy', 'DataController.beforeBuy')
 Route.get('shipping-return', 'DataController.shippingReturn')
 Route.get('measure', 'DataController.measure')
+Route.get('faq', 'DataController.faq')
 
 Route.group(() => {
   Route.post('login', 'AuthController.login')
