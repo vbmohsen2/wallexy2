@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex items-center gap-1 md:gap-2">
     <div v-if="authenticated">
       <xmenu v-model="menu" special>
         <template #active="{active}">
@@ -53,7 +53,7 @@
     </xdialog>
     <xmenu keep v-model="basket">
       <template #active="{active}">
-        <aria class="mr-4 md:mr-10 xl:mr-16 relative" label="باز کردن منوی سبد خرید" @click.native="active">
+        <aria class="relative" label="باز کردن منوی سبد خرید" @click.native="active">
           <icon :name="icons.basket"></icon>
         </aria>
         <div class="w-4 h-4 absolute left-0 bottom-0 transform translate-x-5 pointer-events-none bg-gray-800 text-white text-xs p-0.5 text-center rounded-full transform">

@@ -2,7 +2,8 @@
 <template>
   <div class="flex flex-col min-h-screen flex-grow flex-shrink-0 text-neutral-900">
     <header-x/>
-    <main class="flex-grow relative flex flex-shrink-0 md:mt-36 mt-32">
+    <main :style="headerHeight ? { marginTop: headerHeight + 8 + 'px' } : null"
+          class="flex-grow relative flex flex-shrink-0 md:mt-48 mt-44">
       <transition name="page">
         <div :key="$page.url" class="w-full mb-3">
           <slot/>
@@ -25,7 +26,19 @@ export default {
     HeaderX,
     Errors
   },
+  data: () => ({
+    headerHeight: 0
+  }),
+  methods: {
+    measureHeader() {
+      const header = document.querySelector('header')
+      this.headerHeight = header ? header.offsetHeight : 0
+    }
+  },
   async mounted() {
+    this.measureHeader()
+    this.$nextTick(this.measureHeader)
+    window.addEventListener('resize', this.measureHeader)
     this.$store.commit('authentication/authenticate', this.$page.props.authenticated)
     if (this.$page.props.authenticated) {
       this.$store.commit('basket/update', await this.axios.get('/profile/basket').then(res => res.data))
