@@ -44,6 +44,12 @@
                 <span>نظرات</span>
               </div>
             </inertia-link>
+            <inertia-link href="/admin/partners">
+              <div :class="{'special-x cursor-pointer': $page.component === 'admin/partners' }" class="flex px-4 py-2.5">
+                <icon :name="icons.partner" class="pl-2 -mt-0.5" size="18"/>
+                <span>درخواست همکاری</span>
+              </div>
+            </inertia-link>
           </div>
         </xmenu>
       </div>
@@ -79,6 +85,12 @@
               <span>نظرات</span>
             </div>
           </inertia-link>
+          <inertia-link href="/admin/partners">
+            <div :class="{'special-x cursor-pointer': $page.component === 'admin/partners' }" class="flex px-4 py-2.5">
+              <icon :name="icons.partner" class="pl-2 -mt-0.5" size="18"/>
+              <span>درخواست همکاری</span>
+            </div>
+          </inertia-link>
         </w>
         <w class="md:w-[calc(100%-140px)] p-4">
           <slot/>
@@ -94,7 +106,8 @@ import {
   mdiShape,
   mdiCommentTextOutline,
   mdiCubeOutline,
-  mdiShoppingOutline, mdiMenuDownOutline
+  mdiShoppingOutline, mdiMenuDownOutline,
+  mdiAccountGroupOutline
 } from '@mdi/js';
 
 
@@ -107,6 +120,7 @@ export default {
         shape: mdiShape,
         basket: mdiShoppingOutline,
         comment: mdiCommentTextOutline,
+        partner: mdiAccountGroupOutline,
         menu: mdiMenuDownOutline,
       },
       menu: false,
@@ -119,6 +133,7 @@ export default {
       if (value.includes('admin/comments')) return 'نظرات';
       if (value.includes('admin/products')) return 'محصولات';
       if (value.includes('admin/categories')) return 'دسته بندی ها';
+      if (value.includes('admin/partners')) return 'درخواست همکاری';
     },
     getIcon(value) {
       if (value.includes('admin/slides')) return this.icons.home;
@@ -126,6 +141,7 @@ export default {
       if (value.includes('admin/products')) return this.icons.product;
       if (value.includes('admin/comments')) return this.icons.comment;
       if (value.includes('admin/categories')) return this.icons.shape;
+      if (value.includes('admin/partners')) return this.icons.partner;
     }
   }
 }

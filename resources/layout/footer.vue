@@ -40,6 +40,12 @@
               <span>سؤالات متداول</span>
             </div>
           </inertia-link>
+          <inertia-link href="/partners" title="همکاری تجاری با والکسی">
+            <div class="flex py-2">
+              <icon :name="icons.partner" class="pl-1.5" size="18"/>
+              <span>همکاری تجاری با والکسی</span>
+            </div>
+          </inertia-link>
         </w>
         <w class="mt-6" lg="1/5" sm="1/2">
           <span class="mb-6 text-md block">شبکه های اجتماعی</span>
@@ -114,6 +120,7 @@
 <script>
 import {
   mdiAccountCircle,
+  mdiAccountGroupOutline,
   mdiBasket,
   mdiCellphone,
   mdiCopyright,
@@ -148,6 +155,7 @@ export default {
       telegram: mdiHeart,
       store: mdiStorefront,
       user: mdiAccountCircle,
+      partner: mdiAccountGroupOutline,
       instagram: mdiInstagram,
       copyright: mdiCopyright,
       cellphone: mdiCellphone,

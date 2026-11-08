@@ -83,6 +83,8 @@ Route.group(() => {
 }).prefix('profile').middleware('auth')
 
 //partners
+Route.get('partners', 'PartnersController.index')
+Route.post('partners', 'PartnersController.store')
 
 
 //Admin
@@ -107,4 +109,7 @@ Route.group(() => {
   Route.get('comments', 'AdminsController.comments')
   Route.put('comment/:comment', 'AdminsController.updateComment')
   Route.put('comment/:comment/answer', 'AdminsController.answerComment')
+  Route.get('partners', 'PartnersController.adminIndex')
+  Route.put('partner/:partner', 'PartnersController.update')
+  Route.delete('partner/:partner', 'PartnersController.destroy')
 }).prefix('admin').middleware('auth').middleware('admin')
