@@ -104,6 +104,84 @@
         </card>
       </inertia-link>
     </slider>
+    <section class="mt-6">
+      <container>
+        <div class="relative overflow-hidden rounded-2xl bg-[#153a2e] px-4 py-5 sm:px-6 sm:py-6 lg:px-8">
+          <div class="pointer-events-none absolute -top-24 -left-24 w-64 h-64 rounded-full border border-white/5"/>
+          <div class="pointer-events-none absolute -bottom-28 -right-20 w-72 h-72 rounded-full border border-white/5"/>
+          <div class="pointer-events-none absolute inset-y-0 left-1/2 hidden w-px bg-gradient-to-b from-transparent via-white/5 to-transparent md:block"/>
+
+          <div class="relative grid grid-cols-1 items-center gap-5 md:grid-cols-2 md:gap-6">
+            <!-- متن معرفی -->
+            <div class="space-y-3 text-center md:text-right">
+              <div class="flex items-center justify-center gap-2 text-[#c7a874] md:justify-start">
+                <span class="hidden h-px w-7 bg-[#c7a874]/60 sm:block"/>
+                <span class="text-[11px] font-semibold tracking-wide sm:text-xs">ویژه همکاران تجاری و فعالان حوزه دکوراسیون</span>
+              </div>
+
+              <h2 class="text-xl font-extrabold leading-7 text-white sm:text-2xl">
+                کسب‌وکار دکوراسیون دارید؟
+                <span class="mt-0.5 block text-[#d9c39a]">بیایید مسیر همکاری را شروع کنیم.</span>
+              </h2>
+
+              <p class="mx-auto max-w-xl text-xs leading-6 text-white/70 sm:text-sm md:mx-0">
+                والکسی در جایگاه برند پیشرو در صنعت کاغذدیواری، با مدل همکاری شفاف، توزیع قاعده‌مند آلبوم‌ها و پشتیبانی اختصاصی، همراه کسب‌وکار شماست.
+              </p>
+
+              <div class="flex flex-wrap items-center justify-center gap-2 pt-1 md:justify-start">
+                <inertia-link class="inline-flex items-center justify-center gap-1.5 rounded-lg bg-[#c3a26b] px-5 py-2.5 text-xs font-bold text-[#20342b] shadow-sm transition-colors hover:bg-[#d4b57e] sm:text-sm"
+                              href="/partners" title="درخواست همکاری با والکسی">
+                  <span>درخواست همکاری</span>
+                  <icon :name="icons.arrow" size="16"/>
+                </inertia-link>
+                <inertia-link class="inline-flex items-center justify-center gap-1.5 rounded-lg border border-white/25 px-4 py-2.5 text-xs font-semibold text-white/85 transition-colors hover:bg-white/10 sm:text-sm"
+                              href="/partners#tiers" title="مشاهده سطوح همکاری">
+                  <span>مشاهده سطوح همکاری</span>
+                </inertia-link>
+              </div>
+            </div>
+
+            <!-- کارت مراحل -->
+            <div class="w-full max-w-sm justify-self-center md:justify-self-end">
+              <div class="rounded-xl bg-white p-4 text-center shadow-x sm:p-5">
+                <span class="block text-[9px] font-bold tracking-[0.22em] text-[#a58a5c]">WALLEXY BUSINESS</span>
+                <h3 class="mt-1 text-base font-extrabold text-[#173a2e] sm:text-lg">شروع همکاری در چند مرحله</h3>
+
+                <div class="mt-3 space-y-2.5 text-right">
+                  <div class="flex items-start gap-2.5">
+                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#e9dfcb] text-[10px] font-bold text-[#7d6538]">۱</span>
+                    <div class="pt-0.5">
+                      <p class="text-xs font-bold text-neutral-800">ثبت درخواست همکاری</p>
+                      <p class="mt-0.5 text-[10px] leading-5 text-neutral-500">اطلاعات و مدارک کسب‌وکار خود را ثبت کنید.</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#e9dfcb] text-[10px] font-bold text-[#7d6538]">۲</span>
+                    <div class="pt-0.5">
+                      <p class="text-xs font-bold text-neutral-800">بررسی و تأیید</p>
+                      <p class="mt-0.5 text-[10px] leading-5 text-neutral-500">کارشناسان والکسی درخواست شما را ارزیابی می‌کنند.</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#e9dfcb] text-[10px] font-bold text-[#7d6538]">۳</span>
+                    <div class="pt-0.5">
+                      <p class="text-xs font-bold text-neutral-800">آغاز همکاری و دریافت آلبوم</p>
+                      <p class="mt-0.5 text-[10px] leading-5 text-neutral-500">پس از تأیید، آلبوم‌ها برای شما ارسال می‌شود.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <inertia-link class="mt-4 inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-[#173a2e] px-4 py-2.5 text-xs font-bold text-white transition-colors hover:bg-[#1f4d3d] sm:text-sm"
+                              href="/partners#apply" title="ثبت درخواست همکاری">
+                  <span>درخواست همکاری</span>
+                  <icon :name="icons.arrow" size="14"/>
+                </inertia-link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </container>
+    </section>
   </div>
   <inertia-head>
     <title>قیمت کاغذ دیواری</title>
@@ -170,6 +248,7 @@
 <script>
 
 import Carousel from '@/components/custom/carousel'
+import {mdiArrowLeft} from '@mdi/js'
 
 export default {
   components: {Carousel},
@@ -181,7 +260,10 @@ export default {
     return {
       products: JSON.parse(JSON.stringify(this.$page.props.data.before.products ? this.$page.props.data.before.products : [])),
       slides: this.smartphone ? this.data.slides.filter(photo => photo.type === 'mobile') : this.data.slides.filter(photo => photo.type === 'desktop'),
-      banners: this.smartphone ? this.data.slides.filter(photo => photo.type === 'bannermobile') : this.data.slides.filter(photo => photo.type === 'bannerdesktop')
+      banners: this.smartphone ? this.data.slides.filter(photo => photo.type === 'bannermobile') : this.data.slides.filter(photo => photo.type === 'bannerdesktop'),
+      icons: {
+        arrow: mdiArrowLeft
+      }
     }
   },
   computed: {

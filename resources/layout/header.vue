@@ -85,7 +85,7 @@
                   </nav>
 
                   <inertia-link class="shrink-0 inline-flex items-center rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold px-4 py-2 shadow-sm transition-colors"
-                                href="/contact" title="همکاری با والکسی" @mouseenter="activeCategory = null">
+                                href="/partners" title="همکاری با والکسی" @mouseenter="activeCategory = null">
                     <span>همکاری با والکسی</span>
                   </inertia-link>
                 </div>

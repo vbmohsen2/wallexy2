@@ -1,15 +1,18 @@
 <template>
   <container class="mt-4">
-    <div class="max-w-5xl mx-auto space-y-8 pb-6">
+    <div class="max-w-5xl mx-auto space-y-6 pb-6">
 
       <!-- HERO -->
-      <section class="bg-white p-6 sm:p-10 card-rounded shadow-soft border border-slate-100 text-center space-y-6">
-        <div class="inline-flex flex-wrap items-center justify-center gap-3">
-          <div class="inline-flex items-center gap-2 bg-rose-100 text-rose-600 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
-            <span class="text-base">🤝</span>
-            <span>همکاران تجاری والکسی | Wallexy Partners</span>
+      <section class="relative overflow-hidden bg-white p-6 sm:p-10 rounded-xl border border-neutral-200 shadow-sm text-center space-y-6">
+        <div class="absolute -left-16 -top-16 w-56 h-56 rounded-full bg-emerald-50 opacity-70 pointer-events-none"/>
+        <div class="absolute -right-16 -bottom-16 w-56 h-56 rounded-full bg-neutral-50 opacity-80 pointer-events-none"/>
+
+        <div class="relative inline-flex flex-wrap items-center justify-center gap-3">
+          <div class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-medium border border-emerald-200">
+            <icon :name="icons.handshake" size="16"/>
+            <span class="pt-0.5">همکاران تجاری والکسی | Wallexy Partners</span>
           </div>
-          <div class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-200 px-3.5 py-1.5 rounded-full text-xs font-medium shadow-sm">
+          <div class="inline-flex items-center gap-2 bg-white text-emerald-700 border border-emerald-200 px-3.5 py-1.5 rounded-full text-xs font-medium shadow-sm">
             <span class="relative flex h-2.5 w-2.5">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
@@ -18,35 +21,35 @@
           </div>
         </div>
 
-        <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-800 tracking-tight leading-tight max-w-3xl mx-auto">
-          همکاری تجاری با <span class="text-rose-500">والکسی</span> را آغاز کنید
+        <h1 class="relative text-2xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight leading-tight max-w-3xl mx-auto">
+          همکاری تجاری با <span class="text-emerald-600">والکسی</span> را آغاز کنید
         </h1>
 
-        <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        <p class="relative text-neutral-500 text-sm sm:text-base max-w-2xl mx-auto leading-7">
           شرایط همکاری برای فروشگاه‌های کاغذدیواری و متخصصان دکوراسیون داخلی را ببینید، با نحوه دریافت آلبوم‌ها آشنا شوید و درخواست خود را ثبت کنید.
         </p>
 
-        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-          <a href="#apply" class="bg-rose-500 hover:bg-rose-600 text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-xl transition-all shadow-sm hover:shadow flex items-center gap-2">
+        <div class="relative flex flex-wrap items-center justify-center gap-3 pt-2">
+          <a href="#apply" class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-6 py-3 rounded-lg transition-colors shadow-sm">
             <span>ثبت درخواست همکاری</span>
-            <span class="text-xs">←</span>
+            <icon :name="icons.arrow" size="16"/>
           </a>
-          <a href="#tiers" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-semibold px-5 py-3 rounded-xl transition-all">
+          <a href="#tiers" class="inline-flex items-center justify-center gap-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 text-sm font-semibold px-5 py-3 rounded-lg transition-colors">
             مشاهده سطوح همکاری
           </a>
         </div>
 
-        <div class="pt-6 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-500 font-medium max-w-3xl mx-auto">
+        <div class="relative pt-6 border-t border-neutral-200 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-neutral-500 font-medium max-w-3xl mx-auto">
           <div class="flex items-center justify-center gap-2">
-            <span class="text-emerald-500">✔</span>
+            <icon :name="icons.tick" class="text-emerald-500" size="16"/>
             <span>ارزیابی هویت تجاری</span>
           </div>
           <div class="flex items-center justify-center gap-2">
-            <span class="text-emerald-500">✔</span>
+            <icon :name="icons.tick" class="text-emerald-500" size="16"/>
             <span>توزیع قاعده‌مند آلبوم‌ها</span>
           </div>
           <div class="flex items-center justify-center gap-2">
-            <span class="text-emerald-500">✔</span>
+            <icon :name="icons.tick" class="text-emerald-500" size="16"/>
             <span>پشتیبانی اختصاصی B2B</span>
           </div>
         </div>
@@ -55,34 +58,40 @@
       <!-- BENEFITS -->
       <section id="benefits" class="space-y-4">
         <div class="text-center space-y-1">
-          <div class="inline-flex items-center gap-1.5 text-rose-600 bg-rose-50 px-3 py-1 rounded-full text-xs font-semibold">
-            <span>💡</span>
-            <span>چرا والکسی؟</span>
+          <div class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-200">
+            <icon :name="icons.info" size="14"/>
+            <span class="pt-0.5">چرا والکسی؟</span>
           </div>
-          <h2 class="text-lg sm:text-xl font-extrabold text-slate-800">مزایای شبکه همکاران</h2>
+          <h2 class="text-lg sm:text-xl font-extrabold text-neutral-900">مزایای شبکه همکاران</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div class="bg-white p-6 card-rounded shadow-soft hover:shadow-hover transition-all duration-300 flex flex-col items-center text-center space-y-3 border border-slate-100">
-            <div class="icon-box bg-rose-100 text-rose-500 text-xl">🗂️</div>
-            <h3 class="text-base font-bold text-slate-800">دسترسی به آلبوم‌های متنوع</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center space-y-3">
+            <div class="w-11 h-11 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <icon :name="icons.layers" size="22"/>
+            </div>
+            <h3 class="text-md font-bold text-neutral-900">دسترسی به آلبوم‌های متنوع</h3>
+            <p class="text-sm text-neutral-500 leading-7">
               طرح‌های کاغذدیواری را متناسب با نیاز فروشگاه و سلیقه مشتریان خود انتخاب کنید.
             </p>
           </div>
 
-          <div class="bg-white p-6 card-rounded shadow-soft hover:shadow-hover transition-all duration-300 flex flex-col items-center text-center space-y-3 border border-slate-100">
-            <div class="icon-box bg-emerald-100 text-emerald-500 text-xl">🤝</div>
-            <h3 class="text-base font-bold text-slate-800">شفافیت در همکاری</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
+          <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center space-y-3">
+            <div class="w-11 h-11 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <icon :name="icons.handshake" size="22"/>
+            </div>
+            <h3 class="text-md font-bold text-neutral-900">شفافیت در همکاری</h3>
+            <p class="text-sm text-neutral-500 leading-7">
               شرایط دریافت آلبوم‌ها، ودیعه، تخفیف‌ها و ادامه همکاری به‌صورت روشن و مشخص ارائه می‌شود.
             </p>
           </div>
 
-          <div class="bg-white p-6 card-rounded shadow-soft hover:shadow-hover transition-all duration-300 flex flex-col items-center text-center space-y-3 border border-slate-100">
-            <div class="icon-box bg-purple-100 text-purple-600 text-xl">🎧</div>
-            <h3 class="text-base font-bold text-slate-800">پشتیبانی و ارتباط مستقیم</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
+          <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center space-y-3">
+            <div class="w-11 h-11 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <icon :name="icons.headset" size="22"/>
+            </div>
+            <h3 class="text-md font-bold text-neutral-900">پشتیبانی و ارتباط مستقیم</h3>
+            <p class="text-sm text-neutral-500 leading-7">
               برای پیگیری درخواست، دریافت آلبوم‌ها و پاسخ به پرسش‌های همکاری، با تیم والکسی در ارتباط باشید.
             </p>
           </div>
@@ -92,82 +101,85 @@
       <!-- TIERS -->
       <section id="tiers" class="space-y-4">
         <div class="text-center space-y-1">
-          <div class="inline-flex items-center gap-1.5 text-amber-600 bg-amber-50 px-3 py-1 rounded-full text-xs font-semibold">
-            <span>⭐</span>
-            <span>سطوح ساختاریافته</span>
+          <div class="inline-flex items-center gap-1.5 bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold border border-amber-200">
+            <icon :name="icons.star" size="14"/>
+            <span class="pt-0.5">سطوح ساختاریافته</span>
           </div>
-          <h2 class="text-lg sm:text-xl font-extrabold text-slate-800">مدل سه‌سطحی همکاران والکسی</h2>
+          <h2 class="text-lg sm:text-xl font-extrabold text-neutral-900">مدل سه‌سطحی همکاران والکسی</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <div class="bg-white p-6 card-rounded shadow-soft hover:shadow-hover transition-all duration-300 flex flex-col justify-between space-y-4 border border-slate-100">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- سطح ۱ -->
+          <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
             <div class="space-y-3">
               <div class="flex items-center justify-between">
-                <span class="text-[11px] font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">سطح ۱</span>
-                <span class="text-slate-400">🏅</span>
+                <span class="text-[11px] font-bold text-neutral-600 bg-neutral-100 px-3 py-1 rounded-full">سطح ۱</span>
+                <icon :name="icons.award" class="text-neutral-400" size="20"/>
               </div>
-              <h3 class="text-lg font-bold text-slate-800">همکار پایه</h3>
-              <div class="space-y-2 text-xs text-slate-600 leading-relaxed">
+              <h3 class="text-lg font-bold text-neutral-900">همکار پایه</h3>
+              <div class="space-y-2 text-sm text-neutral-600 leading-7">
                 <p class="flex items-start gap-2">
-                  <span class="text-rose-500 mt-0.5">✓</span>
-                  <span>ودیعه آلبوم: <strong class="text-slate-800">۱,۰۰۰,۰۰۰ تومان</strong></span>
+                  <icon :name="icons.tick" class="text-emerald-500 shrink-0 mt-1" size="16"/>
+                  <span>ودیعه آلبوم: <strong class="text-neutral-900">۱,۰۰۰,۰۰۰ تومان</strong></span>
                 </p>
                 <p class="flex items-start gap-2">
-                  <span class="text-rose-500 mt-0.5">✓</span>
-                  <span>بازگشت ودیعه پس از فروش بیش از <strong class="text-slate-800">۱۵۰ رول</strong> از همان آلبوم</span>
+                  <icon :name="icons.tick" class="text-emerald-500 shrink-0 mt-1" size="16"/>
+                  <span>بازگشت ودیعه پس از فروش بیش از <strong class="text-neutral-900">۱۵۰ رول</strong> از همان آلبوم</span>
                 </p>
               </div>
             </div>
-            <div class="pt-3 border-t border-slate-100 text-[11px] text-slate-400">
+            <div class="pt-3 border-t border-neutral-200 text-xs text-neutral-400">
               معیار ۱۵۰ رول اختصاصاً مربوط به همان آلبوم است.
             </div>
           </div>
 
-          <div class="bg-white p-6 card-rounded shadow-soft hover:shadow-hover transition-all duration-300 flex flex-col justify-between space-y-4 border-2 border-rose-400 relative">
-            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-rose-500 text-white text-[10px] font-bold px-3 py-0.5 rounded-full shadow-sm whitespace-nowrap">
+          <!-- سطح ۲ -->
+          <div class="relative bg-emerald-50/40 p-6 rounded-xl border-2 border-emerald-300 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-emerald-600 text-white text-[10px] font-bold px-3 py-0.5 rounded-full shadow-sm whitespace-nowrap">
               پیشنهاد تعادل تجاری
             </div>
             <div class="space-y-3 pt-1">
               <div class="flex items-center justify-between">
-                <span class="text-[11px] font-bold text-rose-600 bg-rose-50 px-3 py-1 rounded-full">سطح ۲</span>
-                <span class="text-rose-500">⭐</span>
+                <span class="text-[11px] font-bold text-emerald-700 bg-white px-3 py-1 rounded-full border border-emerald-200">سطح ۲</span>
+                <icon :name="icons.star" class="text-emerald-600" size="20"/>
               </div>
-              <h3 class="text-lg font-bold text-slate-800">همکار فعال</h3>
-              <div class="space-y-2 text-xs text-slate-600 leading-relaxed">
+              <h3 class="text-lg font-bold text-neutral-900">همکار فعال</h3>
+              <div class="space-y-2 text-sm text-neutral-600 leading-7">
                 <p class="flex items-start gap-2">
-                  <span class="text-rose-500 mt-0.5">✓</span>
-                  <span>دریافت آلبوم <strong class="text-rose-600 font-bold">بدون دریافت ودیعه</strong></span>
+                  <icon :name="icons.tick" class="text-emerald-600 shrink-0 mt-1" size="16"/>
+                  <span>دریافت آلبوم <strong class="text-emerald-700 font-bold">بدون دریافت ودیعه</strong></span>
                 </p>
                 <p class="flex items-start gap-2">
-                  <span class="text-rose-500 mt-0.5">✓</span>
+                  <icon :name="icons.tick" class="text-emerald-600 shrink-0 mt-1" size="16"/>
                   <span>رعایت شرایط و ضوابط سطح همکاری فعال</span>
                 </p>
               </div>
             </div>
-            <div class="pt-3 border-t border-slate-100 text-[11px] text-slate-400">
+            <div class="pt-3 border-t border-emerald-200 text-xs text-neutral-500">
               نیازمند احراز هویت تجاری و بررسی سابقه فروش.
             </div>
           </div>
 
-          <div class="bg-white p-6 card-rounded shadow-soft hover:shadow-hover transition-all duration-300 flex flex-col justify-between space-y-4 border border-slate-100">
+          <!-- سطح ۳ -->
+          <div class="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
             <div class="space-y-3">
               <div class="flex items-center justify-between">
-                <span class="text-[11px] font-bold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">سطح ۳</span>
-                <span class="text-purple-500">👑</span>
+                <span class="text-[11px] font-bold text-neutral-700 bg-neutral-100 px-3 py-1 rounded-full">سطح ۳</span>
+                <icon :name="icons.crown" class="text-neutral-800" size="20"/>
               </div>
-              <h3 class="text-lg font-bold text-slate-800">همکار ویژه</h3>
-              <div class="space-y-2 text-xs text-slate-600 leading-relaxed">
+              <h3 class="text-lg font-bold text-neutral-900">همکار ویژه</h3>
+              <div class="space-y-2 text-sm text-neutral-600 leading-7">
                 <p class="flex items-start gap-2">
-                  <span class="text-purple-600 mt-0.5">✓</span>
+                  <icon :name="icons.tick" class="text-emerald-500 shrink-0 mt-1" size="16"/>
                   <span>تخفیف‌ها و شرایط اختصاصی ارسال آلبوم</span>
                 </p>
                 <p class="flex items-start gap-2">
-                  <span class="text-purple-600 mt-0.5">✓</span>
+                  <icon :name="icons.tick" class="text-emerald-500 shrink-0 mt-1" size="16"/>
                   <span>اولویت در تامین جدیدترین کالکشن‌ها</span>
                 </p>
               </div>
             </div>
-            <div class="pt-3 border-t border-slate-100 text-[11px] text-slate-400">
+            <div class="pt-3 border-t border-neutral-200 text-xs text-neutral-400">
               متناسب با ضوابط همکاری ویژه والکسی.
             </div>
           </div>
@@ -175,106 +187,110 @@
       </section>
 
       <!-- STEPS -->
-      <section id="steps" class="bg-white p-6 sm:p-8 card-rounded shadow-soft space-y-6 border border-slate-100">
+      <section id="steps" class="bg-white p-5 sm:p-8 rounded-xl border border-neutral-200 shadow-sm space-y-5">
         <div class="text-center space-y-1">
-          <div class="inline-flex items-center gap-1.5 text-purple-600 bg-purple-50 px-3 py-1 rounded-full text-xs font-semibold">
-            <span>🚀</span>
-            <span>مسیر شفاف</span>
+          <div class="inline-flex items-center gap-1.5 bg-neutral-100 text-neutral-600 px-3 py-1 rounded-full text-xs font-semibold border border-neutral-200">
+            <icon :name="icons.steps" size="14"/>
+            <span class="pt-0.5">مسیر شفاف</span>
           </div>
-          <h2 class="text-lg sm:text-xl font-extrabold text-slate-800">مراحل شروع همکاری</h2>
+          <h2 class="text-lg sm:text-xl font-extrabold text-neutral-900">مراحل شروع همکاری</h2>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-2">
-            <span class="text-rose-500 font-black text-sm">مرحله ۱</span>
-            <h4 class="text-xs sm:text-sm font-bold text-slate-800">تکمیل فرم درخواست</h4>
-            <p class="text-xs text-slate-500 leading-relaxed">اطلاعات فردی و نام کسب‌وکار خود را ثبت کنید.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div class="bg-neutral-50 p-4 rounded-lg border border-neutral-200 space-y-2">
+            <span class="text-emerald-600 font-black text-sm">مرحله ۱</span>
+            <h4 class="text-sm font-bold text-neutral-900">تکمیل فرم درخواست</h4>
+            <p class="text-xs text-neutral-500 leading-6">اطلاعات فردی و نام کسب‌وکار خود را ثبت کنید.</p>
           </div>
-          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-2">
-            <span class="text-rose-500 font-black text-sm">مرحله ۲</span>
-            <h4 class="text-xs sm:text-sm font-bold text-slate-800">بارگذاری مدارک</h4>
-            <p class="text-xs text-slate-500 leading-relaxed">تصویر کارت ویزیت و فروشگاه را آپلود نمایید.</p>
+          <div class="bg-neutral-50 p-4 rounded-lg border border-neutral-200 space-y-2">
+            <span class="text-emerald-600 font-black text-sm">مرحله ۲</span>
+            <h4 class="text-sm font-bold text-neutral-900">بارگذاری مدارک</h4>
+            <p class="text-xs text-neutral-500 leading-6">تصویر کارت ویزیت و فروشگاه را آپلود نمایید.</p>
           </div>
-          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-2">
-            <span class="text-rose-500 font-black text-sm">مرحله ۳</span>
-            <h4 class="text-xs sm:text-sm font-bold text-slate-800">بررسی و ارزیابی</h4>
-            <p class="text-xs text-slate-500 leading-relaxed">مدارک توسط کارشناسان والکسی بررسی می‌شود.</p>
+          <div class="bg-neutral-50 p-4 rounded-lg border border-neutral-200 space-y-2">
+            <span class="text-emerald-600 font-black text-sm">مرحله ۳</span>
+            <h4 class="text-sm font-bold text-neutral-900">بررسی و ارزیابی</h4>
+            <p class="text-xs text-neutral-500 leading-6">مدارک توسط کارشناسان والکسی بررسی می‌شود.</p>
           </div>
-          <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-2">
-            <span class="text-rose-500 font-black text-sm">مرحله ۴</span>
-            <h4 class="text-xs sm:text-sm font-bold text-slate-800">تأیید و ارسال آلبوم</h4>
-            <p class="text-xs text-slate-500 leading-relaxed">هماهنگی ارسال آلبوم و شروع همکاری تجاری.</p>
+          <div class="bg-neutral-50 p-4 rounded-lg border border-neutral-200 space-y-2">
+            <span class="text-emerald-600 font-black text-sm">مرحله ۴</span>
+            <h4 class="text-sm font-bold text-neutral-900">تأیید و ارسال آلبوم</h4>
+            <p class="text-xs text-neutral-500 leading-6">هماهنگی ارسال آلبوم و شروع همکاری تجاری.</p>
           </div>
         </div>
       </section>
 
       <!-- REQUIREMENTS -->
-      <section id="requirements" class="bg-white p-6 sm:p-8 card-rounded shadow-soft space-y-6 border border-slate-100">
+      <section id="requirements" class="bg-white p-5 sm:p-8 rounded-xl border border-neutral-200 shadow-sm space-y-5">
         <div class="text-center space-y-1">
-          <div class="inline-flex items-center gap-1.5 text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full text-xs font-semibold">
-            <span>📋</span>
-            <span>احراز هویت</span>
+          <div class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-200">
+            <icon :name="icons.shield" size="14"/>
+            <span class="pt-0.5">احراز هویت</span>
           </div>
-          <h2 class="text-lg sm:text-xl font-extrabold text-slate-800">مدارک موردنیاز بررسی اولیه</h2>
+          <h2 class="text-lg sm:text-xl font-extrabold text-neutral-900">مدارک موردنیاز بررسی اولیه</h2>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
-          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 flex items-start gap-4">
-            <div class="icon-box bg-rose-100 text-rose-500 shrink-0 text-xl">🪪</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+          <div class="p-4 bg-neutral-50 rounded-lg border border-neutral-200 flex items-start gap-3">
+            <div class="w-11 h-11 shrink-0 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <icon :name="icons.card" size="22"/>
+            </div>
             <div class="space-y-1">
-              <h4 class="text-xs sm:text-sm font-bold text-slate-800">کارت ویزیت یا مدرک کسب‌وکار</h4>
-              <p class="text-xs text-slate-500 leading-relaxed">تصویر واضح کارت ویزیت یا مدرک شناسایی مجموعه تجاری.</p>
+              <h4 class="text-sm font-bold text-neutral-900">کارت ویزیت یا مدرک کسب‌وکار</h4>
+              <p class="text-xs text-neutral-500 leading-6">تصویر واضح کارت ویزیت یا مدرک شناسایی مجموعه تجاری.</p>
             </div>
           </div>
 
-          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 flex items-start gap-4">
-            <div class="icon-box bg-emerald-100 text-emerald-500 shrink-0 text-xl">🏬</div>
+          <div class="p-4 bg-neutral-50 rounded-lg border border-neutral-200 flex items-start gap-3">
+            <div class="w-11 h-11 shrink-0 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <icon :name="icons.store" size="22"/>
+            </div>
             <div class="space-y-1">
-              <h4 class="text-xs sm:text-sm font-bold text-slate-800">تصویر فروشگاه یا محل فعالیت</h4>
-              <p class="text-xs text-slate-500 leading-relaxed">تصویر نمای داخلی یا بیرونی فروشگاه و دفتر دکوراسیون.</p>
+              <h4 class="text-sm font-bold text-neutral-900">تصویر فروشگاه یا محل فعالیت</h4>
+              <p class="text-xs text-neutral-500 leading-6">تصویر نمای داخلی یا بیرونی فروشگاه و دفتر دکوراسیون.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- APPLICATION FORM -->
-      <section id="apply" class="bg-white p-6 sm:p-8 card-rounded shadow-soft space-y-6 border border-slate-100">
+      <section id="apply" class="bg-white p-5 sm:p-8 rounded-xl border border-neutral-200 shadow-sm space-y-5">
         <div class="text-center space-y-1">
-          <div class="inline-flex items-center gap-1.5 text-rose-600 bg-rose-50 px-3 py-1 rounded-full text-xs font-semibold">
-            <span>✍️</span>
-            <span>ثبت‌نام همکاران</span>
+          <div class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-200">
+            <icon :name="icons.users" size="14"/>
+            <span class="pt-0.5">ثبت‌نام همکاران</span>
           </div>
-          <h2 class="text-lg sm:text-xl font-extrabold text-slate-800">فرم ثبت درخواست همکاری</h2>
-          <p class="text-xs text-slate-500">اطلاعات خود را وارد کنید تا کارشناسان ما با شما تماس بگیرند.</p>
+          <h2 class="text-lg sm:text-xl font-extrabold text-neutral-900">فرم ثبت درخواست همکاری</h2>
+          <p class="text-xs text-neutral-500">اطلاعات خود را وارد کنید تا کارشناسان ما با شما تماس بگیرند.</p>
         </div>
 
         <form ref="form" class="max-w-3xl mx-auto space-y-4 pt-2" @submit.prevent="submit">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">نام و نام خانوادگی *</label>
-              <input v-model="form.fullName" type="text" required placeholder="مثال: رضا کریمی" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-rose-500 transition-colors">
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">نام و نام خانوادگی *</label>
+              <input v-model="form.fullName" type="text" required placeholder="مثال: رضا کریمی" class="w-full bg-white border border-neutral-200 rounded-lg px-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
             </div>
             <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">شماره تماس همراه *</label>
-              <input v-model="form.phoneNumber" type="tel" required placeholder="09123456789" dir="ltr" class="w-full text-right bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-rose-500 transition-colors">
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">نام فروشگاه یا کسب‌وکار *</label>
-              <input v-model="form.storeName" type="text" required placeholder="مثال: دکوراسیون مدرن" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-rose-500 transition-colors">
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">شهر محل فعالیت *</label>
-              <input v-model="form.cityName" type="text" required placeholder="مثال: تهران" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-rose-500 transition-colors">
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">شماره تماس همراه *</label>
+              <input v-model="form.phoneNumber" type="tel" required placeholder="09123456789" dir="ltr" class="w-full text-right bg-white border border-neutral-200 rounded-lg px-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
             </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">نوع فعالیت *</label>
-              <select v-model="form.activityType" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-rose-500 transition-colors text-slate-700">
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">نام فروشگاه یا کسب‌وکار *</label>
+              <input v-model="form.storeName" type="text" required placeholder="مثال: دکوراسیون مدرن" class="w-full bg-white border border-neutral-200 rounded-lg px-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">شهر محل فعالیت *</label>
+              <input v-model="form.cityName" type="text" required placeholder="مثال: تهران" class="w-full bg-white border border-neutral-200 rounded-lg px-4 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">نوع فعالیت *</label>
+              <select v-model="form.activityType" required class="w-full bg-white border border-neutral-200 rounded-lg px-4 py-2.5 text-sm text-neutral-900 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
                 <option value="">انتخاب کنید...</option>
                 <option value="فروشگاه کاغذدیواری">فروشگاه کاغذدیواری</option>
                 <option value="فروشگاه دکوراسیون داخلی">فروشگاه دکوراسیون داخلی</option>
@@ -284,8 +300,8 @@
               </select>
             </div>
             <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">سطح همکاری پیشنهادی</label>
-              <select v-model="form.tierSelection" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-rose-500 transition-colors text-slate-700">
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">سطح همکاری پیشنهادی</label>
+              <select v-model="form.tierSelection" class="w-full bg-white border border-neutral-200 rounded-lg px-4 py-2.5 text-sm text-neutral-900 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 transition">
                 <option value="پایه">همکار پایه (ودیعه ۱ میلیون تومان)</option>
                 <option value="فعال">همکار فعال (بدون ودیعه - نیازمند احراز)</option>
                 <option value="ویژه">همکار ویژه (تخفیف و شرایط اختصاصی)</option>
@@ -295,30 +311,30 @@
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
             <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">کارت ویزیت / مدرک شناسایی</label>
-              <input ref="cardInput" type="file" accept="image/*" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-1.5 text-xs text-slate-500 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-rose-500 file:text-white cursor-pointer">
-              <span class="block text-[10px] text-slate-400 mt-1">فرمت jpg، png یا webp — حداکثر ۵ مگابایت</span>
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">کارت ویزیت / مدرک شناسایی</label>
+              <input ref="cardInput" type="file" accept="image/*" class="w-full bg-neutral-50 border border-neutral-200 rounded-lg p-1.5 text-xs text-neutral-500 file:mr-2 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-emerald-600 file:text-white cursor-pointer">
+              <span class="block text-[10px] text-neutral-400 mt-1">فرمت jpg، png یا webp — حداکثر ۵ مگابایت</span>
             </div>
             <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">تصویر فروشگاه / محل فعالیت</label>
-              <input ref="storeInput" type="file" accept="image/*" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-1.5 text-xs text-slate-500 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-rose-500 file:text-white cursor-pointer">
-              <span class="block text-[10px] text-slate-400 mt-1">فرمت jpg، png یا webp — حداکثر ۵ مگابایت</span>
+              <label class="block text-xs font-semibold text-neutral-700 mb-1">تصویر فروشگاه / محل فعالیت</label>
+              <input ref="storeInput" type="file" accept="image/*" class="w-full bg-neutral-50 border border-neutral-200 rounded-lg p-1.5 text-xs text-neutral-500 file:mr-2 file:py-1.5 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-emerald-600 file:text-white cursor-pointer">
+              <span class="block text-[10px] text-neutral-400 mt-1">فرمت jpg، png یا webp — حداکثر ۵ مگابایت</span>
             </div>
           </div>
 
           <div class="flex items-center gap-2 pt-2">
-            <input id="privacyAgree" v-model="form.privacyAgree" type="checkbox" required class="w-4 h-4 text-rose-500 border-slate-300 rounded focus:ring-rose-500">
-            <label for="privacyAgree" class="text-xs text-slate-600">
+            <input id="privacyAgree" v-model="form.privacyAgree" type="checkbox" required class="w-4 h-4 text-emerald-600 border-neutral-300 rounded focus:ring-emerald-500">
+            <label for="privacyAgree" class="text-xs text-neutral-600">
               صحت اطلاعات وارد شده را تایید می‌کنم.
             </label>
           </div>
 
-          <div v-if="errorMessage" class="bg-rose-50 border border-rose-200 text-rose-700 text-xs rounded-xl px-4 py-3">
+          <div v-if="errorMessage" class="bg-rose-50 border border-rose-200 text-rose-700 text-xs rounded-lg px-4 py-3">
             {{ errorMessage }}
           </div>
 
-          <div class="pt-3 text-center">
-            <button type="submit" :disabled="loading" class="bg-rose-500 hover:bg-rose-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold text-xs sm:text-sm px-8 py-3 rounded-xl transition-all shadow-sm hover:shadow">
+          <div class="pt-2 text-center">
+            <button type="submit" :disabled="loading" class="bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold text-sm px-8 py-3 rounded-lg transition-colors shadow-sm">
               {{ loading ? 'در حال ارسال...' : 'ثبت نهایی درخواست همکاری' }}
             </button>
           </div>
@@ -326,39 +342,65 @@
       </section>
 
       <!-- FAQ -->
-      <section id="faq" class="bg-white p-6 sm:p-8 card-rounded shadow-soft space-y-6 border border-slate-100">
+      <section id="faq" class="bg-white p-5 sm:p-8 rounded-xl border border-neutral-200 shadow-sm space-y-5">
         <div class="text-center space-y-1">
-          <div class="inline-flex items-center gap-1.5 text-purple-600 bg-purple-50 px-3 py-1 rounded-full text-xs font-semibold">
-            <span>❓</span>
-            <span>پاسخ به ابهامات شما</span>
+          <div class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-200">
+            <icon :name="icons.info" size="14"/>
+            <span class="pt-0.5">پاسخ به ابهامات شما</span>
           </div>
-          <h3 class="text-lg sm:text-xl font-extrabold text-slate-800">سوالات متداول همکاران</h3>
+          <h3 class="text-lg sm:text-xl font-extrabold text-neutral-900">سوالات متداول همکاران</h3>
         </div>
 
-        <div class="space-y-3 max-w-3xl mx-auto">
-          <div v-for="(faq, index) in faqs" :key="index" class="border border-slate-100 rounded-2xl overflow-hidden bg-slate-50/50">
-            <button type="button" class="w-full p-4 text-right flex items-center justify-between gap-4 font-semibold text-xs sm:text-sm text-slate-800 focus:outline-none" @click="toggleFaq(index)">
-              <span>{{ faq.question }}</span>
-              <span :class="{'rotate-180': openFaq === index}" class="text-slate-400 transition-transform duration-300 shrink-0">⌄</span>
+        <div class="space-y-2 max-w-3xl mx-auto">
+          <div v-for="(faq, index) in faqs" :key="index" class="border border-neutral-200 rounded-lg overflow-hidden bg-white">
+            <button type="button" class="w-full p-4 text-right flex items-center justify-between gap-4 font-bold text-sm text-neutral-900 hover:text-emerald-700 transition-colors focus:outline-none" @click="toggleFaq(index)">
+              <span class="flex items-start gap-2.5">
+                <span class="shrink-0 w-6 h-6 mt-0.5 rounded-full bg-neutral-100 text-neutral-500 text-xs font-bold flex items-center justify-center">{{ index + 1 }}</span>
+                <span>{{ faq.question }}</span>
+              </span>
+              <icon :name="icons.chevron" :class="{'rotate-180 text-emerald-600': openFaq === index}" class="shrink-0 text-neutral-400 transition-transform duration-300" size="20"/>
             </button>
-            <div v-show="openFaq === index" class="px-4 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            <div v-show="openFaq === index" class="px-4 pb-4 pr-8 text-sm text-neutral-600 leading-7 border-t border-neutral-200 pt-3">
               {{ faq.answer }}
             </div>
           </div>
         </div>
       </section>
+
+      <!-- CONTACT CTA -->
+      <section class="bg-neutral-900 text-white rounded-xl p-6 sm:p-8 text-center">
+        <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-white/10 flex items-center justify-center">
+          <icon :name="icons.headset" size="24"/>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-extrabold mb-2">سوالی درباره همکاری دارید؟</h2>
+        <p class="text-sm text-neutral-300 max-w-xl mx-auto leading-7 mb-5">
+          کارشناسان والکسی برای پاسخ به پرسش‌های شما درباره شرایط همکاری، ودیعه و دریافت آلبوم‌ها در کنار شما هستند.
+        </p>
+        <div class="flex flex-wrap justify-center gap-2">
+          <a class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
+             href="tel:+989015656733" title="تماس با پشتیبانی همکاران">
+            <icon :name="icons.phone" size="18"/>
+            <span>تماس با پشتیبانی همکاران</span>
+          </a>
+          <a class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
+             href="https://t.me/wallexy_info" rel="noopener" target="_blank" title="پشتیبانی در تلگرام">
+            <icon :name="icons.send" size="18"/>
+            <span>پشتیبانی در تلگرام</span>
+          </a>
+        </div>
+      </section>
     </div>
 
     <!-- MODAL -->
-    <div v-if="modal.show" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 backdrop-blur-sm px-4">
-      <div class="bg-white card-rounded p-6 max-w-sm w-full shadow-hover border border-slate-100 text-center space-y-4">
-        <div class="w-12 h-12 rounded-2xl mx-auto flex items-center justify-center text-xl"
-             :class="modal.type === 'success' ? 'bg-emerald-100 text-emerald-600' : 'bg-rose-100 text-rose-500'">
-          {{ modal.type === 'success' ? '✓' : '!' }}
+    <div v-if="modal.show" class="fixed inset-0 z-50 flex items-center justify-center bg-neutral-900/40 backdrop-blur-sm px-4">
+      <div class="bg-white rounded-xl p-6 max-w-sm w-full shadow-x border border-neutral-200 text-center space-y-4">
+        <div class="w-12 h-12 rounded-xl mx-auto flex items-center justify-center"
+             :class="modal.type === 'success' ? 'bg-emerald-50 text-emerald-600' : 'bg-rose-50 text-rose-500'">
+          <icon :name="modal.type === 'success' ? icons.check : icons.info" size="24"/>
         </div>
-        <h3 class="text-base font-bold text-slate-800">{{ modal.title }}</h3>
-        <p class="text-xs text-slate-600 leading-relaxed">{{ modal.message }}</p>
-        <button type="button" class="w-full bg-rose-500 hover:bg-rose-600 text-white font-semibold py-2.5 rounded-xl text-xs transition-all" @click="modal.show = false">
+        <h3 class="text-base font-bold text-neutral-900">{{ modal.title }}</h3>
+        <p class="text-sm text-neutral-500 leading-7">{{ modal.message }}</p>
+        <button type="button" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 rounded-lg text-sm transition-colors" @click="modal.show = false">
           متوجه شدم
         </button>
       </div>
@@ -367,6 +409,27 @@
 </template>
 
 <script>
+import {
+  mdiAccountGroupOutline,
+  mdiArrowLeft,
+  mdiTrophy,
+  mdiCardAccountDetailsOutline,
+  mdiCheck,
+  mdiCheckCircle,
+  mdiChevronDown,
+  mdiClipboardTextOutline,
+  mdiCrownOutline,
+  mdiHandshakeOutline,
+  mdiHeadset,
+  mdiInformationOutline,
+  mdiLayersOutline,
+  mdiPhone,
+  mdiSend,
+  mdiShieldCheckOutline,
+  mdiStarOutline,
+  mdiStorefrontOutline
+} from '@mdi/js'
+
 export default {
   data() {
     return {
@@ -388,17 +451,37 @@ export default {
         title: '',
         message: ''
       },
+      icons: {
+        handshake: mdiHandshakeOutline,
+        info: mdiInformationOutline,
+        tick: mdiCheck,
+        check: mdiCheckCircle,
+        layers: mdiLayersOutline,
+        headset: mdiHeadset,
+        star: mdiStarOutline,
+        award: mdiTrophy,
+        crown: mdiCrownOutline,
+        steps: mdiClipboardTextOutline,
+        shield: mdiShieldCheckOutline,
+        card: mdiCardAccountDetailsOutline,
+        store: mdiStorefrontOutline,
+        users: mdiAccountGroupOutline,
+        chevron: mdiChevronDown,
+        arrow: mdiArrowLeft,
+        phone: mdiPhone,
+        send: mdiSend
+      },
       faqs: [
         {
-          question: '۱. چه کسانی می‌توانند درخواست همکاری با والکسی ثبت کنند؟',
+          question: 'چه کسانی می‌توانند درخواست همکاری با والکسی ثبت کنند؟',
           answer: 'فروشگاه‌های کاغذدیواری، فروشگاه‌های دکوراسیون داخلی، نصابان حرفه‌ای و فعالان معتبر بازار کاغذدیواری.'
         },
         {
-          question: '۲. شرایط ودیعه همکار پایه و نحوه بازگشت آن چگونه است؟',
+          question: 'شرایط ودیعه همکار پایه و نحوه بازگشت آن چگونه است؟',
           answer: 'در همکار پایه آلبوم با ودیعه ۱ میلیون تومان تقدیم می‌شود. با فروش بیش از ۱۵۰ رول از همان آلبوم، ودیعه بازگردانده می‌شود.'
         },
         {
-          question: '۳. آیا دریافت آلبوم برای همکار فعال بدون ودیعه است؟',
+          question: 'آیا دریافت آلبوم برای همکار فعال بدون ودیعه است؟',
           answer: 'بله، در سطح همکار فعال آلبوم بدون ودیعه ارائه می‌گردد مشروط به احراز شرایط و ضوابط مربوطه.'
         }
       ]
@@ -462,35 +545,6 @@ export default {
 </script>
 
 <style scoped>
-.card-rounded {
-  border-radius: 20px;
-}
-
-.shadow-soft {
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
-}
-
-.hover\:shadow-hover:hover {
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
-}
-
-.rounded-2xl {
-  border-radius: 1rem;
-}
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
-.icon-box {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-}
-
 input[type="file"]::file-selector-button {
   margin-left: 0.5rem;
 }
