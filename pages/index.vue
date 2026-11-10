@@ -106,6 +106,39 @@
     </slider>
     <section class="mt-6">
       <container>
+        <div class="rounded-xl bg-neutral-100 px-3 py-4 border border-neutral-200/80 sm:px-5 sm:py-5">
+          <div class="mb-3 flex items-center justify-between gap-3 px-1">
+            <h2 class="text-sm font-extrabold text-neutral-800 sm:text-base">پیش از خرید، مطمئن شوید</h2>
+            <inertia-link class="hidden items-center gap-1 text-xs font-semibold text-neutral-500 transition-colors hover:text-[#153a2e] sm:flex"
+                          href="/before-buy" title="راهنمای کامل خرید">
+              <span>راهنمای کامل خرید</span>
+              <icon :name="icons.arrow" size="14"/>
+            </inertia-link>
+          </div>
+
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <inertia-link v-for="item in trusts" :key="item.title" :href="item.link" :title="item.title"
+                          class="group flex flex-col items-center rounded-lg bg-white px-3 py-4 text-center border border-neutral-200/70 transition-shadow hover:shadow-md hover:border-[#c3a26b]/50 focus:outline-none focus-visible:border-[#c3a26b]">
+              <div class="flex items-center justify-center gap-2">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#f3eee4] text-[#a58a5c]">
+                  <icon :name="item.icon" size="18"/>
+                </span>
+                <h3 class="text-xs font-extrabold text-neutral-800 sm:text-sm" v-text="item.title"></h3>
+              </div>
+
+              <p class="mt-2 flex-1 text-[11px] leading-6 text-neutral-500 sm:text-xs" v-text="item.text"></p>
+
+              <span class="mt-2 inline-flex items-center gap-1 text-[11px] font-bold text-[#153a2e] transition-colors group-hover:text-[#c3a26b] sm:text-xs">
+                <span v-text="item.action"></span>
+                <icon :name="icons.arrow" class="transition-transform group-hover:-translate-x-0.5" size="13"/>
+              </span>
+            </inertia-link>
+          </div>
+        </div>
+      </container>
+    </section>
+    <section class="mt-6">
+      <container>
         <div class="relative overflow-hidden rounded-2xl bg-[#153a2e] px-4 py-5 sm:px-6 sm:py-6 lg:px-8">
           <div class="pointer-events-none absolute -top-24 -left-24 w-64 h-64 rounded-full border border-white/5"/>
           <div class="pointer-events-none absolute -bottom-28 -right-20 w-72 h-72 rounded-full border border-white/5"/>
@@ -182,6 +215,37 @@
         </div>
       </container>
     </section>
+    <section class="mt-6">
+      <container>
+        <div class="rounded-xl bg-neutral-100 px-3 py-4 border border-neutral-200/80 sm:px-5 sm:py-5">
+          <div class="mb-3 flex items-center justify-between gap-3 px-1">
+            <h2 class="text-sm font-extrabold text-neutral-800 sm:text-base">بیشتر بدانید</h2>
+            <inertia-link class="hidden items-center gap-1 text-xs font-semibold text-neutral-500 transition-colors hover:text-[#153a2e] sm:flex"
+                          href="/contact" title="تماس با کارشناسان والکسی">
+              <span>تماس با کارشناسان</span>
+              <icon :name="icons.arrow" size="14"/>
+            </inertia-link>
+          </div>
+
+          <div class="grid grid-cols-1 gap-3 md:grid-cols-2">
+            <inertia-link v-for="item in guides" :key="item.title" :href="item.link" :title="item.title"
+                          class="group flex items-start gap-3 rounded-lg bg-white px-4 py-4 border border-neutral-200/70 transition-shadow hover:shadow-md hover:border-[#c3a26b]/50 focus:outline-none focus-visible:border-[#c3a26b] sm:gap-4">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#f3eee4] text-[#a58a5c]">
+                <icon :name="item.icon" size="20"/>
+              </span>
+              <div class="min-w-0 flex-1">
+                <h3 class="text-xs font-extrabold text-neutral-800 sm:text-sm" v-text="item.title"></h3>
+                <p class="mt-1 text-[11px] leading-6 text-neutral-500 sm:text-xs" v-text="item.text"></p>
+                <span class="mt-2 inline-flex items-center gap-1 text-[11px] font-bold text-[#153a2e] transition-colors group-hover:text-[#c3a26b] sm:text-xs">
+                  <span v-text="item.action"></span>
+                  <icon :name="icons.arrow" class="transition-transform group-hover:-translate-x-0.5" size="13"/>
+                </span>
+              </div>
+            </inertia-link>
+          </div>
+        </div>
+      </container>
+    </section>
   </div>
   <inertia-head>
     <title>قیمت کاغذ دیواری</title>
@@ -248,7 +312,14 @@
 <script>
 
 import Carousel from '@/components/custom/carousel'
-import {mdiArrowLeft} from '@mdi/js'
+import {
+  mdiArrowLeft,
+  mdiBackupRestore,
+  mdiFrequentlyAskedQuestions,
+  mdiRefresh,
+  mdiRulerSquare,
+  mdiTruckDeliveryOutline
+} from '@mdi/js'
 
 export default {
   components: {Carousel},
@@ -263,7 +334,46 @@ export default {
       banners: this.smartphone ? this.data.slides.filter(photo => photo.type === 'bannermobile') : this.data.slides.filter(photo => photo.type === 'bannerdesktop'),
       icons: {
         arrow: mdiArrowLeft
-      }
+      },
+      trusts: [
+        {
+          icon: mdiRefresh,
+          title: 'موجودی و قیمت',
+          text: 'پیش از پرداخت، موجودی و قیمت روز محصول را استعلام کنید.',
+          action: 'استعلام کنید',
+          link: '/before-buy#availability'
+        },
+        {
+          icon: mdiTruckDeliveryOutline,
+          title: 'ارسال سفارش',
+          text: 'از هزینه و شرایط ارسال سفارش مطلع شوید.',
+          action: 'راهنمای ارسال',
+          link: '/shipping-return#shipping'
+        },
+        {
+          icon: mdiBackupRestore,
+          title: 'بازگشت کالا',
+          text: 'شرایط مرجوعی و بازگشت از خرید را بررسی کنید.',
+          action: 'شرایط مرجوعی',
+          link: '/shipping-return#return'
+        }
+      ],
+      guides: [
+        {
+          icon: mdiRulerSquare,
+          title: 'راهنمای اندازه‌گیری',
+          text: 'نمی‌دانید چند رول کاغذدیواری لازم دارید؟ با راهنمای اندازه‌گیری و محاسبه‌گر آنلاین، تعداد رول دیوارهایتان را دقیق حساب کنید.',
+          action: 'محاسبه تعداد رول',
+          link: '/measure'
+        },
+        {
+          icon: mdiFrequentlyAskedQuestions,
+          title: 'سؤالات متداول',
+          text: 'پاسخ پرتکرارترین پرسش‌ها درباره موجودی و قیمت، اصالت محصول، زمان ارسال و شرایط مرجوعی را یک‌جا ببینید.',
+          action: 'مشاهده پاسخ‌ها',
+          link: '/faq'
+        }
+      ]
     }
   },
   computed: {
