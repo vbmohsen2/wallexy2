@@ -89,6 +89,18 @@
                 </btn>
               </div>
             </w>
+            <inertia-link
+                class="group mb-8 flex items-center gap-3 overflow-hidden rounded-xl bg-gradient-to-l from-sky-600 to-blue-700 px-4 py-3 text-white shadow-sm transition-shadow hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+                href="/partners" title="شروع همکاری با والکسی">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/15">
+                <icon :name="icons.partner" size="22"/>
+              </span>
+              <span class="min-w-0 flex-1">
+                <span class="block text-sm font-extrabold sm:text-base">آیا همکار هستید؟</span>
+                <span class="mt-0.5 block text-[11px] leading-5 text-sky-50 sm:text-xs">برای شروع همکاری و دریافت آلبوم‌ها کلیک کنید</span>
+              </span>
+              <icon :name="icons.arrow" class="shrink-0 transition-transform group-hover:-translate-x-0.5" size="20"/>
+            </inertia-link>
             <w v-if="administrator" class="text-lg mb-8 text-center md:text-right ">
               <div class="justify-center md:justify-end flex flex-row-reverse">
                 <xdialog v-model="editorDialog">
@@ -296,6 +308,39 @@
         </w>
       </row>
     </div>
+    <section class="mt-8">
+      <container>
+        <div class="rounded-xl bg-neutral-100 px-3 py-4 border border-neutral-200/80 sm:px-5 sm:py-5">
+          <div class="mb-3 flex items-center justify-between gap-3 px-1">
+            <h2 class="text-sm font-extrabold text-neutral-800 sm:text-base">قبل از خرید بدانید</h2>
+            <inertia-link class="hidden items-center gap-1 text-xs font-semibold text-neutral-500 transition-colors hover:text-[#153a2e] sm:flex"
+                          href="/before-buy" title="راهنمای کامل خرید">
+              <span>راهنمای کامل خرید</span>
+              <icon :name="icons.arrow" size="14"/>
+            </inertia-link>
+          </div>
+
+          <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <inertia-link v-for="item in beforeBuy" :key="item.title" :href="item.link" :title="item.title"
+                          class="group flex flex-col items-center rounded-lg bg-white px-3 py-4 text-center border border-neutral-200/70 transition-shadow hover:shadow-md hover:border-[#c3a26b]/50 focus:outline-none focus-visible:border-[#c3a26b]">
+              <div class="flex items-center justify-center gap-2">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#f3eee4] text-[#a58a5c]">
+                  <icon :name="item.icon" size="18"/>
+                </span>
+                <h3 class="text-xs font-extrabold text-neutral-800 sm:text-sm" v-text="item.title"></h3>
+              </div>
+
+              <p class="mt-2 flex-1 text-[11px] leading-6 text-neutral-500 sm:text-xs" v-text="item.text"></p>
+
+              <span class="mt-2 inline-flex items-center gap-1 text-[11px] font-bold text-[#153a2e] transition-colors group-hover:text-[#c3a26b] sm:text-xs">
+                <span v-text="item.action"></span>
+                <icon :name="icons.arrow" class="transition-transform group-hover:-translate-x-0.5" size="13"/>
+              </span>
+            </inertia-link>
+          </div>
+        </div>
+      </container>
+    </section>
   </div>
 </template>
 <script>
@@ -326,7 +371,8 @@ import {
   mdiWhatsapp,
   mdiMenuLeft, mdiMenuDown,
   mdiChevronUp,
-  mdiChevronDown, mdiHomeExportOutline
+  mdiChevronDown, mdiHomeExportOutline,
+  mdiArrowLeft, mdiHandshakeOutline, mdiRulerSquare, mdiTruckDeliveryOutline
 } from '@mdi/js';
 
 import Chart from '@/components/product/chart'
@@ -358,6 +404,8 @@ export default {
       path: '',
       cleardCount: '',
       icons: {
+        arrow: mdiArrowLeft,
+        partner: mdiHandshakeOutline,
         plus: mdiPlus,
         warranty: mdiShieldCheckOutline,
         truck: mdiTruckCheckOutline,
@@ -388,7 +436,23 @@ export default {
         telegram: mdiLink,
         twitter: mdiTwitter,
         whatsapp: mdiWhatsapp,
-      }
+      },
+      beforeBuy: [
+        {
+          icon: mdiTruckDeliveryOutline,
+          title: 'نحوه ارسال و شرایط مرجوعی',
+          text: 'از هزینه و زمان ارسال سفارش و شرایط بازگشت کالا مطلع شوید.',
+          action: 'مشاهده راهنما',
+          link: '/shipping-return'
+        },
+        {
+          icon: mdiRulerSquare,
+          title: 'نحوه اندازه‌گیری کاغذ دیواری',
+          text: 'با راهنمای اندازه‌گیری و محاسبه‌گر آنلاین، تعداد رول مورد نیاز دیوار خود را دقیق حساب کنید.',
+          action: 'محاسبه تعداد رول',
+          link: '/measure'
+        }
+      ]
     }
   },
   computed: {
