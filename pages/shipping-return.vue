@@ -150,11 +150,7 @@
           <icon :name="icons.phone" size="18"/>
           <span>تماس با کارشناسان</span>
         </a>
-        <a class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
-           href="https://t.me/wallexy_info" rel="noopener" target="_blank" title="استعلام در تلگرام">
-          <icon :name="icons.send" size="18"/>
-          <span>استعلام در تلگرام</span>
-        </a>
+
         <inertia-link class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
                       href="/contact" title="صفحه تماس با ما">
           <icon :name="icons.message" size="18"/>

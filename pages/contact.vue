@@ -7,7 +7,7 @@
         <span class="pt-0.5">پشتیبانی و تماس</span>
       </div>
       <h1 class="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-3">
-        چطور می‌توانیم <span class="text-neutral-500">کمک کنیم؟</span>
+        چطور می‌توانیم <span class="text-emerald-600">کمک </span>کنیم؟
       </h1>
       <p class="text-sm text-neutral-500 max-w-xl mx-auto leading-7">
         برای دریافت اطلاعات دقیق درباره محصولات، شرایط ثبت سفارش و خدمات پس از خرید، می‌توانید با تیم والکسی در ارتباط باشید.
@@ -42,20 +42,14 @@
             برای پیگیری سفارش‌ها، دریافت راهنمایی و طرح پرسش‌های مربوط به همکاری، می‌توانید از طریق پشتیبانی آنلاین والکسی با ما در ارتباط باشید.
           </p>
           <row class="-mx-1">
-            <w class="px-1 mb-2" sm="1/2">
+            <w class="px-1 mb-2">
               <a class="w-full inline-flex items-center justify-center gap-2 bg-neutral-900 hover:bg-neutral-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
-                 href="https://t.me/wallexy_info" rel="noopener" target="_blank" title="مشاهده شرایط همکاری">
+                 href="/partners" rel="noopener" target="_blank" title="مشاهده شرایط همکاری">
                 <icon :name="icons.send" size="18"/>
                 <span>مشاهده شرایط همکاری</span>
               </a>
             </w>
-            <w class="px-1 mb-2" sm="1/2">
-              <a class="w-full inline-flex items-center justify-center gap-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
-                 href="https://t.me/wallexy_info" rel="noopener" target="_blank" title="بخش همکاران">
-                <icon :name="icons.users" size="18"/>
-                <span>بخش همکاران</span>
-              </a>
-            </w>
+
           </row>
         </w>
         <w class="px-3" md="1/3">

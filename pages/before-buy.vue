@@ -2,10 +2,10 @@
   <container class="mt-4">
     <!-- هدر صفحه -->
     <header class="text-center py-4 md:py-6">
-      <div class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-medium border border-emerald-200 mb-4">
-        <icon :name="icons.shield" size="16"/>
-        <span class="pt-0.5">راهنمای خرید</span>
-      </div>
+<!--      <div class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-medium border border-emerald-200 mb-4">-->
+<!--        <icon :name="icons.shield" size="16"/>-->
+<!--        <span class="pt-0.5">راهنمای خرید</span>-->
+<!--      </div>-->
       <h1 class="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-3">
         قبل از خرید <span class="text-emerald-600">بدانید</span>
       </h1>
@@ -154,6 +154,42 @@
       </div>
     </section>
 
+    <!-- راهنماهای مرتبط -->
+    <section class="bg-white border border-emerald-200 rounded-xl p-5 md:p-6 mb-4">
+      <h2 class="flex items-center gap-2 text-sm font-bold text-neutral-900 mb-3">
+        <icon :name="icons.info" class="text-emerald-600" size="20"/>
+        <span>راهنماهای مرتبط</span>
+      </h2>
+      <row class="-mx-2">
+        <w class="px-2 mb-2" md="1/2">
+          <inertia-link class="flex items-center justify-between gap-3 bg-neutral-50 hover:bg-emerald-50 border border-neutral-200 hover:border-emerald-200 rounded-lg p-4 transition-colors"
+                        href="/faq" title="سؤالات متداول والکسی">
+            <div class="flex items-center gap-3">
+              <icon :name="icons.help" class="text-emerald-600" size="22"/>
+              <div>
+                <div class="text-sm font-semibold text-neutral-900">سؤالات متداول</div>
+                <div class="text-xs text-neutral-500 mt-1">پاسخ پرسش‌های ثبت سفارش، پرداخت، موجودی و ارسال</div>
+              </div>
+            </div>
+            <icon :name="icons.arrow" class="text-emerald-600 shrink-0" size="18"/>
+          </inertia-link>
+        </w>
+        <w class="px-2 mb-2" md="1/2">
+          <inertia-link class="flex items-center justify-between gap-3 bg-neutral-50 hover:bg-emerald-50 border border-neutral-200 hover:border-emerald-200 rounded-lg p-4 transition-colors"
+                        href="/shipping-return" title="نحوه ارسال و شرایط مرجوعی">
+            <div class="flex items-center gap-3">
+              <icon :name="icons.refresh" class="text-emerald-600" size="22"/>
+              <div>
+                <div class="text-sm font-semibold text-neutral-900">نحوه ارسال و شرایط مرجوعی</div>
+                <div class="text-xs text-neutral-500 mt-1">زمان ارسال، بارنامه، هزینه حمل و مهلت ۱۰ روزه مرجوعی</div>
+              </div>
+            </div>
+            <icon :name="icons.arrow" class="text-emerald-600 shrink-0" size="18"/>
+          </inertia-link>
+        </w>
+      </row>
+    </section>
+
     <!-- سوال پایانی -->
     <section class="bg-neutral-900 text-white rounded-xl p-6 md:p-8 mb-4 text-center">
       <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-white/10 flex items-center justify-center">
@@ -253,6 +289,7 @@ import {
   mdiCheckCircleOutline,
   mdiClipboardCheckOutline,
   mdiFormatListNumbered,
+  mdiHelpCircleOutline,
   mdiImageOutline,
   mdiInformationOutline,
   mdiMessageTextOutline,
@@ -274,6 +311,7 @@ export default {
         cart: mdiCartOutline,
         check: mdiCheckCircleOutline,
         checklist: mdiClipboardCheckOutline,
+        help: mdiHelpCircleOutline,
         image: mdiImageOutline,
         info: mdiInformationOutline,
         list: mdiFormatListNumbered,

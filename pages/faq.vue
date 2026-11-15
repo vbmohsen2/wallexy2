@@ -446,12 +446,7 @@ export default {
         }
       ],
       guides: [
-        {
-          href: '/before-buy',
-          title: 'قبل از خرید بدانید',
-          subtitle: 'موجودی، قیمت روز، اصالت محصول و نکات مهم خرید',
-          icon: mdiShieldCheckOutline
-        },
+
         {
           href: '/shipping-return',
           title: 'نحوه ارسال و شرایط مرجوعی',
@@ -463,12 +458,6 @@ export default {
           title: 'نحوه اندازه‌گیری',
           subtitle: '۴ روش ساده + محاسبه‌گر آنلاین تعداد رول',
           icon: mdiRulerSquare
-        },
-        {
-          href: '/contact',
-          title: 'تماس با ما',
-          subtitle: 'شماره تماس پشتیبانی، ایمیل و آدرس دفتر مرکزی',
-          icon: mdiMessageTextOutline
         }
       ]
     }

@@ -10,8 +10,7 @@
         </div>
         <inertia-link class="shrink-0 inline-flex items-center gap-1 bg-white/20 hover:bg-white/30 border border-white/30 rounded-full px-3 py-1 text-xs md:text-sm font-semibold transition-colors"
                       href="/before-buy" title="قبل از خرید بدانید">
-          <span class="hidden xs:inline">قبل از خرید بدانید</span>
-          <span class="xs:hidden">بیشتر بدانید</span>
+          <span class="">قبل از خرید بدانید</span>
           <icon :name="icons.arrow" size="14"/>
         </inertia-link>
       </container>

@@ -54,6 +54,14 @@ export default class DataController {
     return inertia.render('faq')
   }
 
+  public async privacy({inertia}: HttpContextContract) {
+    return inertia.render('privacy')
+  }
+
+  public async terms({inertia}: HttpContextContract) {
+    return inertia.render('terms')
+  }
+
   public async mail({request, response}: HttpContextContract) {
     await request.validate({
       schema: Validation.mail(),
