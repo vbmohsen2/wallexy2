@@ -24,14 +24,14 @@
 
           <!-- راه‌های ارتباط سریع -->
           <ul class="mt-4 space-y-1.5 text-sm">
-            <li>
-              <a class="group flex items-center gap-2 whitespace-nowrap text-neutral-400 transition-colors hover:text-emerald-400"
-                 href="tel:09904283848" title="شماره همراه پشتیبانی فروش">
-                <icon :name="icons.cellphone" class="text-emerald-500/80 transition-colors group-hover:text-emerald-400" size="16"/>
-                <span class="text-neutral-500">پشتیبانی فروش:</span>
-                <span dir="ltr" v-text="getNumber('0990 428 3848')"></span>
-              </a>
-            </li>
+<!--            <li>-->
+<!--              <a class="group flex items-center gap-2 whitespace-nowrap text-neutral-400 transition-colors hover:text-emerald-400"-->
+<!--                 href="tel:09904283848" title="شماره همراه پشتیبانی فروش">-->
+<!--                <icon :name="icons.cellphone" class="text-emerald-500/80 transition-colors group-hover:text-emerald-400" size="16"/>-->
+<!--                <span class="text-neutral-500">پشتیبانی فروش:</span>-->
+<!--                <span dir="ltr" v-text="getNumber('0990 428 3848')"></span>-->
+<!--              </a>-->
+<!--            </li>-->
             <li>
               <a class="group flex items-center gap-2 whitespace-nowrap text-neutral-400 transition-colors hover:text-emerald-400"
                  href="tel:09015656733" title="شماره همراه پشتیبانی همکار">
@@ -109,18 +109,10 @@
                target="_blank" title="نماد ساماندهی">
               <img alt="نماد ساماندهی" class="max-h-full max-w-full object-contain" src="/logo/kasbokar.png">
             </a>
-            <!-- نماد ضمانت ترب؛ برای جایگزینی با تصویر رسمی، فایل را در public/logo/torob.png قرار دهید
-                 و به‌جای بلوک زیر از <img alt="ضمانت خرید ترب" src="/logo/torob.png"> استفاده کنید -->
-            <a class="flex h-[76px] w-[76px] flex-col items-center justify-center gap-1 rounded-xl bg-white p-2 text-center shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-emerald-500/20"
+            <!-- نماد ضمانت ترب؛ تصویر رسمی هولوگرام ترب در public/logo/torob.svg قرار دارد -->
+            <a class="flex h-[76px] w-[76px] items-center justify-center rounded-xl bg-white p-2 shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-emerald-500/20"
                href="https://torob.com/shop/109843/%D9%88%D8%A7%D9%84%DA%A9%D8%B3%DB%8C/" target="_blank" rel="noopener" title="ضمانت خرید ترب">
-<!--              <icon :name="icons.cart" class="text-red-500" size="24"/>-->
-              <img
-                src="https://api.torob.com/third-party/guarantee/v1/hologram/?instance_id=109843"
-                alt="ضمانت ترب"
-                loading="lazy"
-                decoding="async"
-              >
-<!--              <span class="text-[10px] font-bold leading-3 text-neutral-700">ضمانت خرید<br>ترب</span>-->
+              <img alt="نشان ضمانت ترب" class="max-h-full max-w-full object-contain" src="/logo/torob.svg">
             </a>
           </div>
         </div>
