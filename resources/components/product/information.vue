@@ -294,16 +294,10 @@
     </slider>
     <div class="mt-12 py-3 bg-gray-100">
       <row class="px-4 justify-center">
-        <w md="1/3">
+        <w md="1/4" v-for="(feature, index) in features" :key="feature.text" :class="index === 0 ? '' : 'mt-2 md:mt-0'">
           <row class="justify-center">
-            <icon :name="icons.warranty" class="animate-pulse" size="28"/>
-            <span class="pt-1.5 pr-2">تضمین اصالت و کیفیت کالا</span>
-          </row>
-        </w>
-        <w md="1/3" class="mt-2 md:mt-0">
-          <row class="justify-center">
-            <icon :name="icons.truck" class="animate-pulse" size="32"/>
-            <span class="pt-1.5 pr-2">ارسال مستقیم و بدون واسطه از شرکت سازنده</span>
+            <icon :name="feature.icon" class="animate-pulse" :size="feature.size"/>
+            <span class="pt-1.5 pr-2">{{ feature.text }}</span>
           </row>
         </w>
       </row>
@@ -360,6 +354,9 @@ import {
   mdiPlus,
   mdiShieldCheckOutline,
   mdiTruckCheckOutline,
+  mdiCreditCardCheckOutline,
+  mdiRestore,
+  mdiHeadset,
   mdiTextBoxMultipleOutline,
   mdiShare,
   mdiStar,
@@ -437,6 +434,28 @@ export default {
         twitter: mdiTwitter,
         whatsapp: mdiWhatsapp,
       },
+      features: [
+        {
+          icon: mdiShieldCheckOutline,
+          text: 'تضمین اصالت و کیفیت کالا',
+          size: '28'
+        },
+        {
+          icon: mdiCreditCardCheckOutline,
+          text: 'پرداخت امن و آسان',
+          size: '28'
+        },
+        {
+          icon: mdiRestore,
+          text: '۱۰ روز ضمانت مرجوعی',
+          size: '28'
+        },
+        {
+          icon: mdiHeadset,
+          text: 'مشاوره تخصصی قبل از خرید',
+          size: '28'
+        }
+      ],
       beforeBuy: [
         {
           icon: mdiTruckDeliveryOutline,

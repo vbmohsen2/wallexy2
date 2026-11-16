@@ -38,16 +38,20 @@ export default {
     animate() {
       this.scaled = true
       setTimeout(() => this.scaled = false, 150)
+    },
+    toggleOverflow(value) {
+      document.body.classList.toggle('overflow-hidden', value)
+      const blur = document.getElementById('blur')
+      if (blur) blur.classList.toggle('overflow-hidden', value)
     }
   },
   watch: {
     modelValue(value) {
-      value ? document.body.classList.add('overflow-hidden') : document.body.classList.remove('overflow-hidden')
-      value ? document.getElementById('blur').classList.add('overflow-hidden') : document.getElementById('blur').classList.remove('overflow-hidden')
+      this.toggleOverflow(value)
     }
   },
   unmounted() {
-    document.body.classList.remove('overflow-hidden')
+    this.toggleOverflow(false)
   }
 }
 </script>

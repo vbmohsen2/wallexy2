@@ -3,7 +3,8 @@
     <div v-if="authenticated">
       <xmenu v-model="menu" special>
         <template #active="{active}">
-          <aria label="User Menu" @click.native="active">
+          <aria class="rounded-full text-neutral-600 transition-colors hover:bg-[#f8f5ee] hover:text-[#153a2e]"
+                label="User Menu" @click.native="active">
             <icon :name="icons.account"></icon>
           </aria>
         </template>
@@ -45,7 +46,8 @@
     </div>
     <xdialog v-else v-model="dialog">
       <template #active="{active}">
-        <aria label="باز کردن صفحه ورود" @click.native="active">
+        <aria class="rounded-full text-neutral-600 transition-colors hover:bg-[#f8f5ee] hover:text-[#153a2e]"
+              label="باز کردن صفحه ورود" @click.native="active">
           <icon :name="icons.accountAlert"></icon>
         </aria>
       </template>
@@ -53,12 +55,13 @@
     </xdialog>
     <xmenu keep v-model="basket">
       <template #active="{active}">
-        <aria class="relative" label="باز کردن منوی سبد خرید" @click.native="active">
+        <aria class="relative rounded-full text-neutral-600 transition-colors hover:bg-[#f8f5ee] hover:text-[#153a2e]"
+              label="باز کردن منوی سبد خرید" @click.native="active">
           <icon :name="icons.basket"></icon>
+          <span v-if="bagsCount > 0"
+                class="pointer-events-none absolute -left-1 -top-1 flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-[#c3a26b] px-1 text-[10px] font-bold leading-none text-[#20342b] ring-2 ring-white"
+                v-text="getNumber(bagsCount)"></span>
         </aria>
-        <div class="w-4 h-4 absolute left-0 bottom-0 transform translate-x-5 pointer-events-none bg-gray-800 text-white text-xs p-0.5 text-center rounded-full transform">
-          <span v-text="getNumber(bagsCount)"></span>
-        </div>
       </template>
       <div class="w-72 translate-x-1 transform bg-white shadow-x rounded-xl overflow-hidden">
         <div>
